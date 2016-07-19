@@ -1,14 +1,14 @@
 //
-//  CalculatorModule.m
+//  CalculatorBridge.m
 //  telegrapher
 //
 //  Created by Danilo Caetano on 7/18/16.
 //  Copyright © 2016 Facebook. All rights reserved.
 //
 
-#import "CalculatorModule.h"
+#import "CalculatorBridge.h"
 
-@implementation CalculatorModule
+@implementation CalculatorBridge
 
 RCT_EXPORT_MODULE();
 

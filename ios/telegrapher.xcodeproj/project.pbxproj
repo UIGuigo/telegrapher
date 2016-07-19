@@ -22,7 +22,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		4374E4541D3DE637008293E6 /* CalculatorModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4374E4531D3DE637008293E6 /* CalculatorModule.m */; };
+		4374E4541D3DE637008293E6 /* CalculatorBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4374E4531D3DE637008293E6 /* CalculatorBridge.m */; };
 		43FD014C1D3D8C39003D367F /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD014B1D3D8C39003D367F /* Calculator.swift */; };
 		43FD01581D3D8C7D003D367F /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43FD01571D3D8C7D003D367F /* Calculator.storyboard */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -128,8 +128,8 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = telegrapher/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = telegrapher/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		4374E4531D3DE637008293E6 /* CalculatorModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorModule.m; sourceTree = "<group>"; };
-		4374E4551D3DE64C008293E6 /* CalculatorModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorModule.h; sourceTree = "<group>"; };
+		4374E4531D3DE637008293E6 /* CalculatorBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBridge.m; sourceTree = "<group>"; };
+		4374E4551D3DE64C008293E6 /* CalculatorBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorBridge.h; sourceTree = "<group>"; };
 		43FD014A1D3D8C38003D367F /* telegrapher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "telegrapher-Bridging-Header.h"; sourceTree = "<group>"; };
 		43FD014B1D3D8C39003D367F /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		43FD01571D3D8C7D003D367F /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
@@ -252,8 +252,8 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				43FD014B1D3D8C39003D367F /* Calculator.swift */,
 				43FD01571D3D8C7D003D367F /* Calculator.storyboard */,
-				4374E4531D3DE637008293E6 /* CalculatorModule.m */,
-				4374E4551D3DE64C008293E6 /* CalculatorModule.h */,
+				4374E4531D3DE637008293E6 /* CalculatorBridge.m */,
+				4374E4551D3DE64C008293E6 /* CalculatorBridge.h */,
 			);
 			name = telegrapher;
 			sourceTree = "<group>";
@@ -564,7 +564,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				43FD014C1D3D8C39003D367F /* Calculator.swift in Sources */,
-				4374E4541D3DE637008293E6 /* CalculatorModule.m in Sources */,
+				4374E4541D3DE637008293E6 /* CalculatorBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

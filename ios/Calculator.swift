@@ -85,7 +85,7 @@ final class CalculatorViewController: UIViewController {
   }
   
   /* Private variables */
-  private let module = CalculatorModule()
+  private let module = CalculatorBridge()
   private var result = 0
   private let lhs = 0
   private let rhs = 0

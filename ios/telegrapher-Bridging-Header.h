@@ -13,4 +13,4 @@
 
 
 // Native @objc bridges
-#import "CalculatorModule.h"
+#import "CalculatorBridge.h"

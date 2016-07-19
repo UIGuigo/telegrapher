@@ -7,7 +7,7 @@ import {
   NativeModules,
 } from 'react-native';
 
-var { CalculatorModule } = NativeModules;
+var { CalculatorBridge } = NativeModules;
 
 class Calculator extends React.Component {
 
@@ -23,7 +23,7 @@ class Calculator extends React.Component {
   }
 
   resetResults() {
-    CalculatorModule.resetResults((error, reset) => {
+    CalculatorBridge.resetResults((error, reset) => {
       if (error) {
         console.error(error);
       } else {
@@ -36,10 +36,10 @@ class Calculator extends React.Component {
   componentDidMount() { /* Launches upon creation of Component */
 
     // RCT_EXPORT_METHOD(string) example
-    CalculatorModule.greet(this.name);
+    CalculatorBridge.greet(this.name);
 
     // Callback example
-    CalculatorModule.findEvents((error, events) => {
+    CalculatorBridge.findEvents((error, events) => {
       if (error) {
         console.error(error);
       } else {
