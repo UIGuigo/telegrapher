@@ -41,12 +41,10 @@ final class CalculatorViewController: UIViewController {
   @IBOutlet var percentage: UIButton!
   
   /* IBActions */
-  
   @IBAction func didPressKey(key: UIButton) {
     
     switch key {
     case clear:
-      print("case \(key)")
       reset()
     default:
       print("default")
@@ -55,7 +53,11 @@ final class CalculatorViewController: UIViewController {
   }
   
   /* Private variables */
+  private let module = CalculatorModule()
   private var result = 0
+  private let lhs = 0
+  private let rhs = 0
+  private let operation = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -76,6 +78,14 @@ final class CalculatorViewController: UIViewController {
     print("reset()")
     result = 0
     output.text = "\(result)"
+  }
+  
+  private func numberKeyPressed(number: Int) {
+    print("#\(number) pressed")
+  }
+  
+  private func operationKeyPressed(op: String) {
+    print("\(op) pressed")
   }
   
 }
