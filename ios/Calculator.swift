@@ -44,6 +44,38 @@ final class CalculatorViewController: UIViewController {
   @IBAction func didPressKey(key: UIButton) {
     
     switch key {
+    case one:
+      numberKeyPressed(number: 1)
+    case two:
+      numberKeyPressed(number: 2)
+    case three:
+      numberKeyPressed(number: 3)
+    case four:
+      numberKeyPressed(number: 4)
+    case five:
+      numberKeyPressed(number: 5)
+    case six:
+      numberKeyPressed(number: 6)
+    case seven:
+      numberKeyPressed(number: 7)
+    case eight:
+      numberKeyPressed(number: 8)
+    case nine:
+      numberKeyPressed(number: 9)
+    case zero:
+      numberKeyPressed(number: 0)
+    case empty:
+      numberKeyPressed(number: 0)
+    case plus:
+      operationKeyPressed(op: "+")
+    case minus:
+      operationKeyPressed(op: "-")
+    case times:
+      operationKeyPressed(op: "*")
+    case divide:
+      operationKeyPressed(op: "/")
+    case equals:
+      operationKeyPressed(op: "=")
     case clear:
       reset()
     default:
