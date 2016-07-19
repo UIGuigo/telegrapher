@@ -1,7 +1,11 @@
-// Calculator.js
+'use strict';
 
-var React = require('react-native');
-var { NativeModules, Text } = React;
+import React, { 
+  NativeModules, 
+  Text 
+} from 'react';
+
+var { CalculatorModule } = require('NativeModules');
 
 var Calculator = React.createClass({
   getInitialState() {
@@ -21,7 +25,6 @@ var Calculator = React.createClass({
     NativeModules.CalculatorModule.genericOperation(this.state.left, this.state.operation, this.state.right, (result) => {
        this.setState({result});
     });
-
   },
   render: function() {
     return (
@@ -29,3 +32,5 @@ var Calculator = React.createClass({
     );
   }
 });
+
+module.exports = Calculator;

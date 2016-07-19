@@ -59,7 +59,17 @@ final class CalculatorViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setup()
     reset()
+  }
+  
+  private func setup() {
+    RCTBundleURLProvider.sharedSettings().setDefaults()
+    let jsCodeLocation = RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index.ios", fallbackResource: nil)
+    let moduleView = RCTRootView(bundleURL: jsCodeLocation, moduleName: "telegrapher", initialProperties: nil, launchOptions: nil)
+    
+    guard let module = moduleView else { fatalError("Invalid RCTRootView") }
+    self.view.addSubview(module)
   }
   
   private func reset() {

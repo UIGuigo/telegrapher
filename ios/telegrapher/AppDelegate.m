@@ -9,7 +9,6 @@
 
 #import "AppDelegate.h"
 #import <UIKit/UIKit.h>
-#import "Calculator-Swift.h"
 
 #import "RCTBundleURLProvider.h"
 #import "RCTRootView.h"
@@ -44,17 +43,6 @@
   
   UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Calculator" bundle:nil];
   UIViewController *viewController = [storyboard instantiateInitialViewController];
-  
-  NSURL *jsCodeLocation;
-  
-  [[RCTBundleURLProvider sharedSettings] setDefaults];
-  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
-  
-  RCTRootView *moduleView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                        moduleName:@"telegrapher"
-                                                 initialProperties:nil
-                                                     launchOptions:launchOptions];
-  
   
   self.window.rootViewController = viewController;
   [self.window makeKeyAndVisible];
