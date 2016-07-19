@@ -1,36 +1,61 @@
 'use strict';
 
-import React, { 
-  NativeModules, 
-  Text 
-} from 'react';
+import React from 'react';
+import {
+  Text,
+  View,
+  NativeModules,
+} from 'react-native';
 
-var { CalculatorModule } = require('NativeModules');
+var { CalculatorModule } = NativeModules;
 
-var Calculator = React.createClass({
-  getInitialState() {
-    return { 	
-	text: 'Goodbye World.',
-	result: 0,
-	left: 0,
-	right: 0,
-	operation: '' 
-    };
-  },
-  componentDidMount() {
-    NativeModules.CalculatorModule.processString(this.state.text, (text) => {
-      this.setState({text});
+class Calculator extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+    this.name = 'Danilo',
+    this.result = 0
+    // this.result = 0,
+    // this.left = 0,
+    // this.right = 0,
+    // this.operation = ''
+  }
+
+  resetResults() {
+    CalculatorModule.resetResults((error, reset) => {
+      if (error) {
+        console.error(error);
+      } else {
+        this.result = 0;
+        console.log(this.result);
+      }
     });
-    
-    NativeModules.CalculatorModule.genericOperation(this.state.left, this.state.operation, this.state.right, (result) => {
-       this.setState({result});
+  }
+
+  componentDidMount() { /* Launches upon creation of Component */
+
+    // RCT_EXPORT_METHOD(string) example
+    CalculatorModule.greet(this.name);
+
+    // Callback example
+    CalculatorModule.findEvents((error, events) => {
+      if (error) {
+        console.error(error);
+      } else {
+        this.setState({events: events});
+        console.log(events);
+      }
     });
-  },
-  render: function() {
+  }
+
+  render() { /* Can we ignore the render method? Ghost views? Gross */
     return (
-      <Text>{this.state.text}</Text>
+      <View>
+        <Text>{this.props.name}</Text>
+      </View>
     );
   }
-});
+}
 
 module.exports = Calculator;
