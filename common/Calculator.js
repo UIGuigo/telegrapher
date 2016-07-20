@@ -14,9 +14,11 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props)
 
-    this.name = 'Danilo',
-    this.result = 0
-    // this.result = 0,
+    this.state = {
+      result: 0
+    };
+
+    this.name = 'Danilo'
     // this.left = 0,
     // this.right = 0,
     // this.operation = ''
@@ -27,8 +29,8 @@ class Calculator extends React.Component {
       if (error) {
         console.error(error);
       } else {
-        this.result = 0;
-        console.log(this.result);
+        this.state.result = 0;
+        console.log(this.state.result);
       }
     });
   }
